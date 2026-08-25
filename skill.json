@@ -1,0 +1,38 @@
+{
+  "name": "genpark-studio-grade-acoustic-voice-isolation-denoiser-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Studio-grade acoustic voice isolator removing background reverberation and room acoustics in real-time.",
+  "author": "genpark",
+  "category": "audio-isolation",
+  "tags": [
+    "voice-isolation",
+    "elevenlabs-isolator",
+    "acoustic-denoiser",
+    "reverb-removal",
+    "studio-audio"
+  ],
+  "inputs": {
+    "noisy_audio_url": {
+      "type": "string"
+    },
+    "isolation_intensity": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "isolation_job_id": {
+      "type": "string"
+    },
+    "snr_signal_to_noise_improvement_db": {
+      "type": "number"
+    },
+    "room_reverberation_elimination_pct": {
+      "type": "number"
+    },
+    "studio_flac_audio_output_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
